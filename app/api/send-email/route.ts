@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
 
       const notificationEmailData = await resend.emails.send({
         from: 'Truck Repair Shop Leads <noreply@truckrepairleads.com>',
-        to: ['smaslesa@gmail.com', 'senad@truckrepairleads.com'], // Your emails
+        to: ['smaslesa@gmail.com'],
         subject: `🚗 New Lead: ${shop} - ${fullName}`,
         html: notificationHtml,
       });
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
       // This is good for email clients that don't support HTML
       const fallbackNotification = await resend.emails.send({
         from: 'Truck Repair Shop Leads <noreply@truckrepairleads.com>',
-        to: ['smaslesa@gmail.com', 'senad@truckrepairleads.com'],
+        to: ['smaslesa@gmail.com'],
         subject: `🚗 New Lead: ${shop} - ${fullName}`,
         text: `
 New Lead Received!
