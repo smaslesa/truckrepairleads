@@ -20,7 +20,7 @@ const QuickEstimator = () => {
     dent: 'Dent Repair',
     paint: 'Paint Work',
     glass: 'Glass Replacement',
-    truck breakdown: 'Truck Repair'
+    'truck breakdown': 'Truck Repair'
   }
 
   const severityLevels = {
@@ -57,7 +57,7 @@ const QuickEstimator = () => {
       moderate: { economy: [300, 600], midsize: [400, 700], luxury: [600, 1000], suv: [500, 900] },
       major: { economy: [500, 1000], midsize: [600, 1200], luxury: [800, 1600], suv: [700, 1400] }
     },
-    truck breakdown: {
+    'truck breakdown': {
       minor: { economy: [1000, 3000], midsize: [1500, 4000], luxury: [2500, 6000], suv: [2000, 5000] },
       moderate: { economy: [3000, 8000], midsize: [4000, 10000], luxury: [6000, 15000], suv: [5000, 12000] },
       major: { economy: [8000, 20000], midsize: [10000, 25000], luxury: [15000, 40000], suv: [12000, 30000] }
@@ -69,7 +69,7 @@ const QuickEstimator = () => {
     dent: { minor: [0.5, 1], moderate: [1, 2], major: [2, 4] },
     paint: { minor: [1, 2], moderate: [2, 4], major: [5, 10] },
     glass: { minor: [1, 1], moderate: [1, 2], major: [2, 3] },
-    truck breakdown: { minor: [3, 7], moderate: [7, 14], major: [14, 30] }
+    'truck breakdown': { minor: [3, 7], moderate: [7, 14], major: [14, 30] }
   }
 
   const calculateEstimate = () => {
