@@ -1,0 +1,27 @@
+<svg width="320" height="40" viewBox="0 0 320 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- TRUCKREPAIR text -->
+  <text
+    x="0"
+    y="28"
+    font-family="SF Pro Display, Helvetica Neue, system-ui, sans-serif"
+    font-size="24"
+    font-weight="700"
+    letter-spacing="2.4px"
+    fill="#2563eb"
+  >
+    TRUCKREPAIR
+  </text>
+
+  <!-- LEADS text (lighter for dark backgrounds) -->
+  <text
+    x="210"
+    y="28"
+    font-family="SF Pro Display, Helvetica Neue, system-ui, sans-serif"
+    font-size="24"
+    font-weight="300"
+    letter-spacing="3.6px"
+    fill="#d1d5db"
+  >
+    LEADS
+  </text>
+</svg>

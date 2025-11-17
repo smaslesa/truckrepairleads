@@ -1,0 +1,50 @@
+# Robots.txt for BodyShopLeads.com
+# Optimized for Google SEO and Auto Body Shop Marketing
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Special instructions for Google's crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Allow Google's image crawler
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Google's mobile crawler
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Block admin/private areas (if any exist in future)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /api/
+
+# Block common non-content files
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Allow specific important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Sitemap location for search engines
+Sitemap: https://bodyshopleads.com/sitemap.xml
+
+# Additional sitemaps (if you add more in future)
+# Sitemap: https://bodyshopleads.com/sitemap-images.xml
+# Sitemap: https://bodyshopleads.com/sitemap-videos.xml
+
+# Host specification (helps with canonical URLs)
+Host: bodyshopleads.com
+
+# Notes for search engines:
+# This site specializes in digital marketing for auto body shops
+# Primary keywords: auto body marketing, collision repair SEO, body shop leads
+# Geographic focus: United States auto body industry
+# Content updates: Regular blog posts and case studies

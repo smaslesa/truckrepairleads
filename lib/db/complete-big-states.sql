@@ -1,0 +1,126 @@
+    -- ============================================
+    -- ADD TEXAS AND FLORIDA CITIES TO DATABASE
+    -- ============================================
+    -- Copy and paste this entire SQL into your Neon console
+    -- This adds 50 major cities each for Texas and Florida
+
+    -- TEXAS CITIES (50 cities)
+    INSERT INTO cities (state, city, slug) VALUES
+    ('TX', 'Houston', 'houston'),
+    ('TX', 'San Antonio', 'san-antonio'),
+    ('TX', 'Dallas', 'dallas'),
+    ('TX', 'Austin', 'austin'),
+    ('TX', 'Fort Worth', 'fort-worth'),
+    ('TX', 'El Paso', 'el-paso'),
+    ('TX', 'Arlington', 'arlington'),
+    ('TX', 'Corpus Christi', 'corpus-christi'),
+    ('TX', 'Plano', 'plano'),
+    ('TX', 'Lubbock', 'lubbock'),
+    ('TX', 'Laredo', 'laredo'),
+    ('TX', 'Irving', 'irving'),
+    ('TX', 'Garland', 'garland'),
+    ('TX', 'Frisco', 'frisco'),
+    ('TX', 'McKinney', 'mckinney'),
+    ('TX', 'Grand Prairie', 'grand-prairie'),
+    ('TX', 'Amarillo', 'amarillo'),
+    ('TX', 'Brownsville', 'brownsville'),
+    ('TX', 'Killeen', 'killeen'),
+    ('TX', 'Pasadena', 'pasadena'),
+    ('TX', 'Mesquite', 'mesquite'),
+    ('TX', 'McAllen', 'mcallen'),
+    ('TX', 'Waco', 'waco'),
+    ('TX', 'Carrollton', 'carrollton'),
+    ('TX', 'Denton', 'denton'),
+    ('TX', 'Midland', 'midland'),
+    ('TX', 'Abilene', 'abilene'),
+    ('TX', 'Beaumont', 'beaumont'),
+    ('TX', 'Round Rock', 'round-rock'),
+    ('TX', 'The Woodlands', 'the-woodlands'),
+    ('TX', 'Richardson', 'richardson'),
+    ('TX', 'Lewisville', 'lewisville'),
+    ('TX', 'Tyler', 'tyler'),
+    ('TX', 'College Station', 'college-station'),
+    ('TX', 'Wichita Falls', 'wichita-falls'),
+    ('TX', 'Allen', 'allen'),
+    ('TX', 'San Angelo', 'san-angelo'),
+    ('TX', 'Edinburg', 'edinburg'),
+    ('TX', 'Sugar Land', 'sugar-land'),
+    ('TX', 'Mission', 'mission'),
+    ('TX', 'Conroe', 'conroe'),
+    ('TX', 'Bryan', 'bryan'),
+    ('TX', 'New Braunfels', 'new-braunfels'),
+    ('TX', 'Pharr', 'pharr'),
+    ('TX', 'Longview', 'longview'),
+    ('TX', 'Baytown', 'baytown'),
+    ('TX', 'League City', 'league-city'),
+    ('TX', 'Missouri City', 'missouri-city'),
+    ('TX', 'Temple', 'temple'),
+    ('TX', 'Flower Mound', 'flower-mound'),
+
+    -- FLORIDA CITIES (50 cities)
+    ('FL', 'Jacksonville', 'jacksonville'),
+    ('FL', 'Miami', 'miami'),
+    ('FL', 'Tampa', 'tampa'),
+    ('FL', 'Orlando', 'orlando'),
+    ('FL', 'St. Petersburg', 'st-petersburg'),
+    ('FL', 'Hialeah', 'hialeah'),
+    ('FL', 'Port St. Lucie', 'port-st-lucie'),
+    ('FL', 'Cape Coral', 'cape-coral'),
+    ('FL', 'Tallahassee', 'tallahassee'),
+    ('FL', 'Fort Lauderdale', 'fort-lauderdale'),
+    ('FL', 'Pembroke Pines', 'pembroke-pines'),
+    ('FL', 'Hollywood', 'hollywood'),
+    ('FL', 'Gainesville', 'gainesville'),
+    ('FL', 'Miramar', 'miramar'),
+    ('FL', 'Coral Springs', 'coral-springs'),
+    ('FL', 'Palm Bay', 'palm-bay'),
+    ('FL', 'West Palm Beach', 'west-palm-beach'),
+    ('FL', 'Clearwater', 'clearwater'),
+    ('FL', 'Lakeland', 'lakeland'),
+    ('FL', 'Pompano Beach', 'pompano-beach'),
+    ('FL', 'Miami Gardens', 'miami-gardens'),
+    ('FL', 'Davie', 'davie'),
+    ('FL', 'Boca Raton', 'boca-raton'),
+    ('FL', 'Sunrise', 'sunrise'),
+    ('FL', 'Plantation', 'plantation'),
+    ('FL', 'Miami Beach', 'miami-beach'),
+    ('FL', 'Deltona', 'deltona'),
+    ('FL', 'Palm Coast', 'palm-coast'),
+    ('FL', 'Largo', 'largo'),
+    ('FL', 'Melbourne', 'melbourne'),
+    ('FL', 'Boynton Beach', 'boynton-beach'),
+    ('FL', 'Fort Myers', 'fort-myers'),
+    ('FL', 'Kissimmee', 'kissimmee'),
+    ('FL', 'Homestead', 'homestead'),
+    ('FL', 'North Port', 'north-port'),
+    ('FL', 'Lauderhill', 'lauderhill'),
+    ('FL', 'Deerfield Beach', 'deerfield-beach'),
+    ('FL', 'Wellington', 'wellington'),
+    ('FL', 'Daytona Beach', 'daytona-beach'),
+    ('FL', 'Weston', 'weston'),
+    ('FL', 'Tamarac', 'tamarac'),
+    ('FL', 'Delray Beach', 'delray-beach'),
+    ('FL', 'Ocala', 'ocala'),
+    ('FL', 'Port Orange', 'port-orange'),
+    ('FL', 'Sanford', 'sanford'),
+    ('FL', 'Sarasota', 'sarasota'),
+    ('FL', 'Palm Beach Gardens', 'palm-beach-gardens'),
+    ('FL', 'Bradenton', 'bradenton'),
+    ('FL', 'Bonita Springs', 'bonita-springs'),
+    ('FL', 'Pensacola', 'pensacola')
+    ON CONFLICT (state, city) DO NOTHING;
+
+    -- ============================================
+    -- VERIFY THE CITIES WERE ADDED
+    -- ============================================
+    -- After running the INSERT above, run this to verify:
+
+    SELECT state, COUNT(*) as city_count 
+    FROM cities 
+    WHERE state IN ('TX', 'FL')
+    GROUP BY state
+    ORDER BY state;
+
+    -- Expected results:
+    -- TX: 50 cities
+    -- FL: 50 cities
